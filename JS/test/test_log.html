@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>emulib - test log</title>
+	<meta name="author" content="Emanuel Regnath">
+
+	<!-- load basic style sheet -->
+	<link rel="stylesheet" href="https://classless.de/classless.css">
+
+	<script src="../emu/log.js"></script>
+	<script src="../emu/prf.js"></script>
+
+</head>
+<body>
+		
+	<script type="text/javascript">
+		// Testing the Logger
+		log.setLevel(log.TRACE)
+		log.trace("trace test log")
+		log.debug("debug test log")
+		log.info("info test log")
+		log.warn("warning test log")
+		log.error("error test log")
+		console.log("a normal log")
+
+		mylog = log.getLogger("mylog")
+		mylog.setLevel(log.ERROR)
+		mylog.warn("warning on new logger")
+		mylog.error("error on new logger")
+
+		nextlog = log.getLogger("mylog")
+		nextlog.warn("not seen warning")
+
+
+		// Testing Profiler
+		dateprf = prf.getProfiler("Date")
+		for(var i = 0; i < 142; i++ ){
+			dateprf.start()
+			for(var j = 0; j < Math.ceil(Math.random * 1000); j++ ){
+				Date.parse('04 Dec 1995 00:12:00 GMT');
+			}
+			dateprf.stop();
+		};
+		dateprf.print()
+		prf.print()
+
+	</script>
+
+	<!-- Header: -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->  
+	<header>
+		<h1>Testing the logging.</h1>
+		<p>Look into developer console to see output.</p>
+		
+	</header>
+
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>emulib - test log</title>
+	<meta name="author" content="Emanuel Regnath">
+
+	<!-- load basic style sheet -->
+	<link rel="stylesheet" href="https://classless.de/classless.css">
+
+	<script src="../emu/crc.js"></script>
+
+</head>
+<body>
+		
+	<script type="text/javascript">
+		var testin = "123456789"
+
+		// Testing the Logger
+		console.log("A test");
+
+		crc8 = crc.crc8(testin)
+		console.log("CRC-8 is", "0x"+crc8.toString(16), "should be 0xd0")
+
+		crc16 = crc.crc16(testin)
+		console.log("CRC-16 is", "0x"+crc16.toString(16), "should be 0x2189")
+
+
+		// var tab8 = crc.createTable(CRC_POLY8, 8);
+		// console.log(tab8)
+		//printTable(tab8);
+
+
+
+		console.log("CRC 16 -------");
+		// var tab16 = createTable(CRC_POLY16, 16);
+		// printTable(tab16, 16);
+
+		// var tab32 = createTable(CRC_POLY32);
+		// printTable(tab32, 32);
+	</script>
+
+	<!-- Header: -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->  
+	<header>
+		<h1>Testing CRC.</h1>
+		<p>Look into developer console to see output.</p>
+		
+	</header>
+
+
+
+</body>
+</html>
