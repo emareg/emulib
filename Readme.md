@@ -27,8 +27,8 @@ emu.buf:   a generic fixed-memory circular message/byte buffer
 emu.crc:   crc8, crc16, and crc32 with a minimal 16 entry LUT
 emu.led:   LED functions such as blinking
 emu.log:   log messages at several levels to stdout or file
-emu.perf:  simple performance profiler to measure timing
-emu.pidc:  PID Controller
+emu.prf:  simple performance profiler to measure timing
+emu.pid:   PID Controller
 emu.si:    Enhance safety and readability SI units
 ```
 <!-- emu.geo:   global positioning, e.g. bearing, haversine -->
@@ -59,7 +59,7 @@ This library is work in progress and not everything works as it should. Not all 
 | `crc`  |  •  |  •  |     |  •  |  •  |
 | `led`  |     |  •  |     |     |     | 
 | `log`  |     |  •  |     |  •  |  •  |
-| `perf` |  •  |  •  |  •  |     |  •  |
+| `prf`  |  •  |  •  |  •  |  •  |  •  |
 | `pidc` |  •  |     |     |  •  |     | 
 | `si`   |  •  |  •  |  •  |  •  |     |
 
